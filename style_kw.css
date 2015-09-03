@@ -1,0 +1,397 @@
+/*---------RESET CSS----------- 
+
+http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, iframe,
+h1, h2, h3, p, blockquote, a, cite,
+img, q, ul, li, article, 
+footer, header, section
+ {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, footer, header, section {
+	display: block;
+}
+body {
+	line-height: 1;
+	outline: none;
+}
+ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+
+
+/*-----------------STYLE--------------------*/
+
+html, body {
+	height: 100%;
+	width: 100%;
+	font-family: 'Josefin Sans', 'verdana', sans-serif;
+	font-size: 15px;
+	font-weight: 300;
+	background-color: #393839;
+}
+
+.header-bgr {
+	height: 100vh;
+	width: 100vw;
+	background: url(../img/dilla.jpg) no-repeat center;
+}
+
+.header-bgr::after {
+	display: block;
+	height: 100%;
+	width: 100%;
+	content: '';
+	background: url(../img/3px-tile.png);
+	background-repeat: repeat;
+	border-bottom: 1px solid orange;
+}
+
+header {
+	position: absolute;
+	top: 90%;
+	-ms-transform: translateY(-90%);
+	-webkit-transform: translateY(-90%);
+	transform: translateY(-90%);
+	width: 100%;
+	background-color: #000;
+	opacity: 0.7;
+	filter: alpha(opacity=70);
+}
+
+h1, h2, h3 {
+	display: block;
+	position: relative;
+	width: 100%;
+	padding: 0 3%;
+	font-size: 5em;
+	color: #fff;
+	text-align: right;
+	font-family: 'Times New Roman', serif;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+
+}
+
+h1 {
+	line-height: 0.1em;
+	margin-bottom: 0.8em;
+}
+
+h1 span{
+	color: orange;
+	font-size: 2.5em;
+}
+
+h2, h3 {
+	font-size: 1.2em;
+	font-weight: 100;
+	font-family: 'Josefin Sans', 'verdana', sans-serif;
+	color: #20C2FB;
+}
+
+h3 {
+	font-size: 1em;
+	padding: 1%;
+}
+
+blockquote {
+	display: block;
+	width: 90%;
+	margin: 5% auto;
+	color: #aaa;
+	font-size: 1.1em;
+	line-height: 1.4em;
+	text-align: justify;
+	font-weight: 100;
+}
+
+blockquote img {
+	display: none;
+}
+
+cite a {
+	text-decoration: none;
+	color: orange;
+}
+
+cite a:hover {
+	color: #20C2FB;
+}
+
+iframe {
+	height:14em;
+	border-top: 1px solid orange;
+	border-bottom: 1px solid orange;
+	margin-bottom: 1em;
+}
+
+section {
+	display: -webkit-box;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+
+	-webkit-flex-flow: column;
+	-ms-flex-flow: column;
+	flex-flow: column;
+	
+	-webkit-justify-content: center;
+	-ms-justify-content: center;
+	justify-content: center;
+	align-content: center;
+	
+	width: 70%;
+	margin: 3% auto;
+}
+
+.quote {
+	width: 100%;
+	padding: 2%;
+	margin: 5% auto;
+	-webkit-border-radius: 0.8em;
+	border-radius: 0.8em;
+	border-top: 1px solid orange;
+	border-bottom: 1px solid orange;
+}
+
+.quote img {
+	display: block;
+	position: relative;
+	left: 50%;
+	-ms-transform: translateX(-50%);
+	-webkit-transform: translateX(-50%);
+	transform: translateX(-50%);
+	width: 50px;
+	height: 50px;
+	-webkit-border-radius: 50%;
+	border-radius: 50%;
+	border: 2px solid orange;
+}
+
+.quote p {
+	color: #aaa;
+	font-size: 1.1em;
+	font-weight: 100;
+	line-height: 1.3em;
+	text-align: justify;
+	font-style: italic;
+	padding: 0.5em;
+}
+
+.quote p span {
+	display: block;
+	color: orange;
+	font-style: normal;
+	text-align: center;
+	margin-top: 1em;
+}
+
+footer {
+	background-color: #181818;
+	color: #606060;
+	font-size: 0.8em;
+	padding: 0.4em;
+	text-align: center;
+	border-top: 1px solid orange;
+}
+
+/*-------------------------------------------*/
+@media (min-height: 550px){
+
+	.header-bgr {
+		background-position: top;
+		background-size: 100% auto;
+	}
+}
+
+/*-------------------------------------------*/
+@media (min-width: 610px) and (min-height: 710px){
+
+	header {
+		top: 90%;
+		-ms-transform: translateY(-90%);
+		-webkit-transform: translateY(-90%);
+		transform: translateY(-90%);
+	}
+}
+
+/*-------------------------------------------*/
+@media (min-width: 700px){
+	
+	h1, h2, h3,
+	blockquote,
+	.quote p {
+		font-weight: 300;
+	}
+
+	iframe {
+		height: 17em;
+	}
+
+	blockquote {
+		width: 70%;
+	}
+
+	section {
+		width: 60%;
+	}
+}
+
+/*-------------------------------------------*/
+@media (min-width: 850px){ /*layout change*/
+
+	html, body {
+		height: 100%;
+		background-image: url(../img/3px-tile.png);
+		background-repeat: repeat;
+	}
+
+	header {
+		top: 20%;
+		-ms-transform: translateY(-20%);
+		-webkit-transform: translateY(-20%);
+		transform: translateY(-20%);
+		opacity: 0.5;
+		filter: alpha(opacity=50);
+	}
+
+	h1 {
+		font-size: 6em;
+		line-height: 0;
+	}
+
+	h1 span {
+		font-size: 3em;
+	}
+
+	.header-bgr {
+		background-image: none;
+		display: block;
+		height: 50vh;	
+	}
+
+	.header-bgr::after {
+		display: none;
+	}
+
+	header {
+		position: absolute;
+		top: 20%;
+		width: 80%;
+	}
+
+	blockquote {
+		position: relative;
+		width: 80%;
+		margin: 0;
+		margin: 0 0 5em auto;
+	}
+
+	blockquote img {
+		display: inline-block;
+		position: relative;
+		width: 30%;
+		height: auto;
+		margin-right: 1em;
+		margin: 0.5em;
+		-webkit-border-radius: 50%;
+		border-radius: 50%;
+		border: 2px solid orange;
+	}
+
+	blockquote p {
+		width: 60%;
+		display: inline-block;
+		position: absolute;
+		top: 50%;
+		-ms-transform: translateY(-50%);
+		-webkit-transform: translateY(-50%);
+		transform: translateY(-50%);
+		/*margin:0 1em;*/
+		-webkit-border-radius: 0.8em;
+		border-radius: 0.8em;
+		border-right: 1px solid orange;
+		border-left: 1px solid orange;
+		padding: 1em;
+	}
+
+	cite a {
+		display: inline-block;
+		position: absolute;
+		bottom: 1%;
+		left: 3%;
+	}
+
+	.iframe-bgr {
+		display: block;
+		width: 80%;
+		height: 20em;
+		margin: 0;
+		margin: 0 auto 5em 0;
+	}
+
+	iframe {
+		position: relative;
+		height: 100%;
+		width: 50%;
+		margin: 0;
+		left: 50%;
+		border: none;
+	}
+
+	section {
+		-webkit-flex-flow: row;
+		flex-flow: row;
+		width: 80%;
+		margin: 2em 0 2em auto;
+	}
+
+	blockquote,
+	.iframe-bgr,
+	section {
+		padding: 1em;
+		background-color: #000;
+		opacity: 0.5;
+		filter: alpha(opacity=50);
+	}
+
+
+	.quote {
+		margin: 1em;
+		border-top: none;
+		border-bottom: none;
+		border-right: 1px solid orange;
+		border-left: 1px solid orange;
+		-webkit-border-radius: 0.8em;
+		border-radius: 0.8em;
+	}
+
+}
+
+/*-------------------------------------------*/
+@media (min-width: 1300px){
+	body, html {
+		font-size: 18px;
+	}
+}
